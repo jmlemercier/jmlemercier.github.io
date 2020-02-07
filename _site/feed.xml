@@ -29,7 +29,7 @@
       <item>
         <title>Electroacoustic study of new types of loudspeakers</title>
         <description>&lt;div class=&quot;post-image&quot;&gt;
-    &lt;img src=&quot;/assets/voxline/style.png&quot; height=&quot;280px&quot; /&gt;
+    &lt;img src=&quot;/assets/voxline/style.png&quot; alt=&quot;Style&quot; height=&quot;280px&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Paris-based &lt;a href=&quot;http://www.voxlineaudio.com&quot; class=&quot;inner-link&quot;&gt;Voxline Audio&lt;/a&gt; company has started in 2017 developing audiophile, hand-crafted loudspeakers and designing its associated electronics (Digital Adio Converter, Amplifying chain). Building on a collaboration with Ecole Polytechnique, ENSAM and Voxline, we led a 5-month characterizing study of these loudspeakers with &lt;a href=&quot;http://www.ircam.fr&quot; class=&quot;inner-link&quot;&gt;IRCAM&lt;/a&gt;, focusing on :&lt;/p&gt;
@@ -47,7 +47,7 @@
 
 &lt;li&gt; The &lt;b&gt;harmonic content&lt;/b&gt; of the response, studying it with both traditional spectrum analysis tools and recent methods developed and illustrated in &lt;a href=&quot;/2020/01/12/HPS.html&quot; class=&quot;inner-link&quot;&gt;this article on Homophase Signal Decomposition &lt;/a&gt;. &lt;/li&gt; &lt;/ul&gt;
 
-&lt;p style=&quot;text-align: center; font-weight: bold&quot;&gt; A full report in French is available at the following &lt;a class=&quot;inner-link&quot; href=&quot;./assets/reports/voxline_report.pdf&quot;&gt; link &lt;/a&gt; &lt;p&gt;
+&lt;p style=&quot;text-align: center; font-weight: bold&quot;&gt; A full report in French is available at the following &lt;a class=&quot;inner-link&quot; href=&quot;/assets/reports/voxline_report.pdf&quot;&gt; link &lt;/a&gt; &lt;p&gt;
 
 &lt;p class=&quot;section-title&quot;&gt; 1- Louspeaker description &lt;/p&gt;
 
@@ -78,7 +78,7 @@ The so-called &quot;Vertex&quot; loudspeaker features :
 
 &lt;p class=&quot;section-title&quot;&gt; 2- Emission directivity behaviour &lt;/p&gt;
 
-We measured the directivity behaviour of the Vertex loudspeaker in IRCAM achenoic chamber, using 20Hz-20kHz exponential chirps. The results observed on fig.3 are extremely close to those of a theoretical acoustical dipole, which confirms the dipolar behaviour. The company embraced this behaviour it as a way to promote use of its loudspeakers in omnidirectional environments (the figure, although not shown here, is absolutely symmetrical), such as a central installation in art exhbitions for example. This has been tested in October 2020 at the Bettencourt Awards Exhibition in Palays de Tokyo (consult the&lt;a class=&quot;inner-link&quot; href=&quot;https://www.fondationbs.org/fr/culture/metiers-dart/prix-liliane-bettencourt-pour-lintelligence-de-la-main&quot;&gt; Awards scheme &lt;/a&gt;).
+We measured the directivity behaviour of the Vertex loudspeaker in IRCAM achenoic chamber, using 20Hz-20kHz exponential chirps. The results observed on fig.3 are extremely close to those of a theoretical acoustical dipole, which confirms the dipolar behaviour. The company embraced this behaviour it as a way to promote use of its loudspeakers in omnidirectional environments (the figure, although not shown here, is absolutely symmetrical), such as a central installation in art exhibitions for example. This has been tested in October 2020 at the Bettencourt Awards Exhibition in Palays de Tokyo (consult the&lt;a class=&quot;inner-link&quot; href=&quot;https://www.fondationbs.org/fr/culture/metiers-dart/prix-liliane-bettencourt-pour-lintelligence-de-la-main&quot;&gt; Awards scheme &lt;/a&gt;).
 
 &lt;div class=&quot;post-image&quot;&gt;
 &lt;div class=&quot;post-image-line&quot;&gt;
