@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+---
+<ul class="post-list">
+  {% for post in site.posts %}
+    <div class ="exp-post">
+    <li>
+      <a href="{{ post.url }}" class="post-title">{{ post.date | date_to_string }} - {{ post.title }}</a>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+
+      <div class="keywords">
+		<ul class="keywords">
+			<li class="keyword-title"> Keywords : </li>
+			<li class="keyword_list">
+				<ul class="keyword_list">
+				{% assign keys = post.keywords | split: ", " %}
+					{% for key in keys %}
+						<li class="keyword"> {{ key }} </li>
+					{% endfor %}
+				</ul> 
+			</li>
+	</ul>
+</div>
+
+    </li>
+   </div>
+   <hr>
+  {% endfor %}
+</ul>

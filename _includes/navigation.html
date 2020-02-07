@@ -1,0 +1,38 @@
+<nav id="navbar">
+
+<div class="navbar">
+  <ul class="navbar-nav">
+  {% assign not_home = false %}
+
+  {% for item in site.data.navigation %}
+  {% assign class = nil %}
+  {% if item.name != "Home & Projects" %}
+    {% assign alternate_url_list = item.link | split: "/" %}
+    {% assign alternate_url = "/" | append: alternate_url_list[1] | append: "s/" %}
+
+    {% if page.url contains item.link or page.url contains alternate_url %}
+        {% assign class = 'active' %}
+        {% assign not_home = true %}
+    {% endif %}
+    <li class= "nav-{{ class }}">
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}">
+        {{ item.name }}
+      </a>
+     </li>
+
+  {% else %}
+      {% if page.url contains item.link and not_home == false %}
+        {% assign class = 'active' %}
+      {% endif %}
+    <li class= "nav-{{ class }}">
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}">
+        {{ item.name }}
+      </a>
+     </li>
+  {% endif %}
+  {% endfor %}
+
+</ul>
+
+</div>
+</nav>

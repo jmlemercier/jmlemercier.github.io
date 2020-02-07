@@ -1,0 +1,42 @@
+
+name:         jmlemercier
+description:  A place for posting my work-related projects, experiences and overall raconting my back
+url:          http://github.com/jmlemercier/jmlemercier.github.io
+
+collections:
+  experiences:
+    output: true
+
+  educations:
+    output: true
+
+defaults:
+  - scope: 
+      path: ""
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
+
+  - scope:
+      path: ""
+      type: "educations"
+    values:
+      layout: "education"
+      
+  - scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+

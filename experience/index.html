@@ -1,0 +1,39 @@
+---
+layout: default
+title: Experience
+---
+
+	<ul class="post-list">
+	{% assign exp_list = site.experiences | where: "type", "experience" %}
+	{% for exp in exp_list %}
+	<a href=" {{exp.url}}"> <div class="exp-post">
+	<li>
+		<div class="exp-title">
+		<a href= "{{ exp.url }}" class="exp-title">{{ exp.title }} </a>
+		</div>
+
+		<div class="exp-frame">
+		<p class="exp-period"> {{ exp.period }}</p>
+		<p class="exp-place"> 
+		{{ exp.full_company }} , {{ exp.place }} 
+		</p>
+		</div>
+
+		<div class="keywords">
+		<ul class="keywords">
+			<li class="keyword-title"> Keywords : </li>
+			<li class="keyword_list">
+				<ul class="keyword_list">
+				{% assign skills = exp.skills | split: ", " %}
+					{% for skill in skills %}
+						<li class="keyword"> {{ skill }} </li>
+					{% endfor %}
+				</ul> 
+			</li>
+		</ul>
+		</div>
+	</li>
+	</a></div>
+	<hr>
+	{% endfor %}
+</ul>

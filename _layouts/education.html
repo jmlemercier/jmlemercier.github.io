@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class=post>
+<div class="exp-title">
+<p class="exp-title"> {{ page.title }} </p>
+</div>
+
+<div class="exp-frame">
+		<p class="exp-period"> {{ page.period }}</p>
+		<p class="exp-place"> 
+		{{ page.full_company }} , {{ page.place }} 
+		</p>
+		</div>
+
+	<div class="post-content"> 
+
+		{{ content }}
+
+	</div>
+
+	<div class="linkto">
+		{% assign companies = page.company | split: ", "%}
+			{% for company_tuple in companies %}
+				{% assign company = company_tuple | split: " - " %}
+		<a href={{ page.linkto }} > Official program description and full course list </a>
+			{% endfor %}
+		
+	</div>
+
+	<div class="courses_skills">
+		<div class="courses"> 
+		<p class="courses_list"> Courses followed </p> 
+
+		<ul class="courses_list">
+		{% assign courses = page.courses | split: ", " %}
+			{% for course in courses %}
+			<li class="keypoint"> {{ course }} </li>
+			{% endfor %}
+		</ul>
+		</div>
+
+		<div class="skills">
+		<p class="skills_list"> Skills and Topics </p> 
+		<ul class="skills_list">
+		{% assign skills = page.skills | split: ", " %}
+			{% for skill in skills %}
+			<li class="keypoint"> {{ skill }} </li>
+			{% endfor %}
+		</ul>
+		</div>
+	</div>
+
+	<hr>
+
+</div>

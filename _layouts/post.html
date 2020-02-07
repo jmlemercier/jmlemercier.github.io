@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="post">
+<div class="post-header">
+	<p class="post-inner-title"> {{ page.title }}</p>
+	<p class="post-date">{{ page.date | date_to_string }}</p>
+</div>
+
+<div class="keywords">
+		<ul class="keywords">
+			<li class="keyword-title"> Keywords : </li>
+			<li class="keyword_list">
+				<ul class="keyword_list">
+				{% assign keys = page.keywords | split: ", " %}
+					{% for key in keys %}
+						<li class="keyword"> {{ key }} </li>
+					{% endfor %}
+				</ul> 
+			</li>
+	</ul>
+</div>
+
+<div class="post-content">
+	{{ content }}
+</div>
+
+
+</div>

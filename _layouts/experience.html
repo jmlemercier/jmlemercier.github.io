@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="exp-title">
+<p class="exp-title"> {{ page.title }} </p>
+</div>
+
+<div class="exp-frame">
+		<p class="exp-period"> {{ page.period }}</p>
+		<p class="exp-place"> 
+		{{ page.full_company }} , {{ page.place }} 
+		</p>
+		</div>
+
+	<div class="post-content"> 
+
+		{{ content }}
+
+	</div>
+
+	<div class="keywords">
+		<ul class="keywords">
+			<li class="keyword-title"> Keywords : </li>
+			<li class="keyword_list">
+				<ul class="keyword_list">
+				{% assign skills = page.skills | split: ", " %}
+					{% for skill in skills %}
+						<li class="keyword"> {{ skill }} </li>
+					{% endfor %}
+				</ul> 
+			</li>
+	</ul>
+	</div>
+
+	<div class="company-container">
+	<ul class='companies'>
+		<li class="company-title"> Access companies homepage : </li>
+		<li class="company-list">
+			<ul class="company-list">
+				{% assign companies = page.company | split: ", "%}
+				{% for company_tuple in companies %}
+					{% assign company = company_tuple | split: " - " %}
+				<li class="company">
+			<a href={{ company[1] }} class="company"> <img src= {{ company[2] }} height="40" class="logo"></a>
+				</li>
+				{% endfor %}
+			</ul> 
+		</li>
+
+	</div>
+	<hr>
