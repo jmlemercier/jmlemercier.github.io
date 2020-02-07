@@ -29,7 +29,7 @@
       <item>
         <title>Electroacoustic study of new types of loudspeakers</title>
         <description>&lt;div class=&quot;post-image&quot;&gt;
-    &lt;img src=&quot;/assets/voxline/style.png&quot; alt=&quot;Style&quot; height=&quot;280px&quot; /&gt;
+    &lt;img src=&quot;/assets/voxline/style.PNG&quot; alt=&quot;Style&quot; height=&quot;280px&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Paris-based &lt;a href=&quot;http://www.voxlineaudio.com&quot; class=&quot;inner-link&quot;&gt;Voxline Audio&lt;/a&gt; company has started in 2017 developing audiophile, hand-crafted loudspeakers and designing its associated electronics (Digital Adio Converter, Amplifying chain). Building on a collaboration with Ecole Polytechnique, ENSAM and Voxline, we led a 5-month characterizing study of these loudspeakers with &lt;a href=&quot;http://www.ircam.fr&quot; class=&quot;inner-link&quot;&gt;IRCAM&lt;/a&gt;, focusing on :&lt;/p&gt;
@@ -105,7 +105,7 @@ The most classical model derived by Thiele and Small in the mid 20th century fea
 &lt;/ul&gt;
 
 &lt;div class=&quot;post-image&quot;&gt;
-	&lt;img class=&quot;image&quot; src=&quot;/assets/voxline/TSmodel.png&quot; alt=&quot;fig.4 : Linear model electromechanical equivalent circuit&quot; height=&quot;150px&quot; /&gt;
+	&lt;img class=&quot;image&quot; src=&quot;/assets/voxline/TSmodel.PNG&quot; alt=&quot;fig.4 : Linear model electromechanical equivalent circuit&quot; height=&quot;150px&quot; /&gt;
 	&lt;p class=&quot;caption&quot;&gt; fig.4 : Linear model electromechanical equivalent circuit &lt;/p&gt;
 &lt;/div&gt;
 
@@ -157,7 +157,7 @@ C &amp;amp; \quad = \begin{bmatrix}
 \end{align*}
 
 &lt;div class=&quot;post-image&quot;&gt;
-	&lt;img class=&quot;image&quot; src=&quot;/assets/voxline/NLmodel.png&quot; alt=&quot;fig.5 : Nonlinear model electromechanical equivalent circuit&quot; height=&quot;150px&quot; /&gt;
+	&lt;img class=&quot;image&quot; src=&quot;/assets/voxline/NLmodel.PNG&quot; alt=&quot;fig.5 : Nonlinear model electromechanical equivalent circuit&quot; height=&quot;150px&quot; /&gt;
 	&lt;p class=&quot;caption&quot;&gt; fig.5 : Nonlinear model electromechanical equivalent circuit &lt;/p&gt;
 &lt;/div&gt;
 
