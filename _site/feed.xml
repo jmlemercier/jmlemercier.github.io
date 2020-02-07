@@ -38,7 +38,7 @@
 &lt;li&gt; The acoustic emission &lt;b&gt;directivity behaviour&lt;/b&gt;, measuring it by traditional means in achenoic environment &lt;/li&gt;
 
 &lt;li&gt; A &lt;b&gt;modelling of the transduction chain&lt;/b&gt; with extended Thiele-Small parameters (that is, classical Thiele-Small modelling with addition of nonlinear laws) in the Port-Hamiltonian System formulation for passive, energy-conserving components. This model was built with the final aim of:
-	&lt;ul class=&quot;list&quot;&gt; 
+	&lt;ul class=&quot;sublist&quot;&gt; 
 		&lt;li&gt;Identifying the Thiele-Small (linearized behaviour) parameters to compare the loudspeaker to industry standards&lt;/li&gt;
 		&lt;li&gt;Understanding the most influent sources of nonlinear behaviour, to exhibit controls on the harmonic distortion rate&lt;/li&gt;
 		&lt;li&gt;Building a digital twin of the loudspeaker suitable for realistic simulations, enabling Voxline to try out different parameter values and have an insight of the output frequency response without having to hand-build another prototype&lt;/li&gt;

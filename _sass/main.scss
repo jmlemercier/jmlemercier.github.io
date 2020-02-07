@@ -272,7 +272,11 @@ p.note {
 }
 
 ul.list {
-	list-style: circle outside none;
+	list-style: circle outside url("/assets/css/bullet_1.jfif");
+}
+
+ul.sublist {
+	list-style: circle inside url("/assets/css/bullet_2.jfif");
 }
 
 .inner-link {
@@ -402,11 +406,13 @@ div.ext-title, div.edu-title {
 
 p.exp-period {
 	font-size: 20px;
+	color: grey;
 	text-decoration-style: none;
 }
 
 p.exp-place {
 	font-size: 20px;
+	color: grey;
 	text-decoration-style: none;
 }
 
@@ -586,6 +592,10 @@ div.resume {
 .contact-types li {
 	font-weight: bold;
 	padding-bottom: 23px;
+}
+
+.contact-details li:hover {
+	opacity: 0.7;
 }
 
 .repair {
