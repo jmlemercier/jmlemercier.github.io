@@ -16,7 +16,7 @@
         {% assign not_home = true %}
     {% endif %}
     <li class= "nav-{{ class }}">
-      <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}">
+      <a href="{{ site.baseurl }}{{ item.link }}">
         {{ item.name }}
       </a>
      </li>
@@ -26,7 +26,7 @@
         {% assign class = 'active' %}
       {% endif %}
     <li class= "nav-{{ class }}">
-      <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}">
+      <a href="{{ site.baseurl }}{{ item.link }}">
         {{ item.name }}
       </a>
      </li>
