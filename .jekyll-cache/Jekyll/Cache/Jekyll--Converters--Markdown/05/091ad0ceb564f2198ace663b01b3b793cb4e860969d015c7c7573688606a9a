@@ -1,0 +1,16 @@
+I"Í<div class="post-image">
+    <div class="post-image-line">
+    <img class="image" src="/assets/voxline/harmonic2_x.png" height="400px" />
+    <img class="image" src="/assets/voxline/harmonic2_i.png" height="400px" />
+</div>
+
+In addition to all the classical Fourier spectrum estimation tools, we develop here a method for analyzing the harmonic content in an adapted fashion for nonlinear systems, more precisely for dynamic systems that can be described with a  <b>Volterra series</b> formalism. The methods presented here were issued in the context of the <a href="http://www.voxlineaudio.com" class="inner-link">Voxline Audio</a> - <a href="http://www.ircam.fr" class="inner-link">IRCAM</a> collaboration centered on <a class="inner-link" href="/2020/01/13/voxline.html">nonlinear characterization of loudspeaker prototypes</a>.
+
+<div class="repair">
+	<h1> Currently building </h1>
+	<div class="post-image">
+		<img src="/assets/css/repair.jpeg" />
+	</div>
+</div>
+</div>
+:ET

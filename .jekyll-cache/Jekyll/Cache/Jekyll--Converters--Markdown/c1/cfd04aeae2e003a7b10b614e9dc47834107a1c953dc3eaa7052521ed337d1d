@@ -1,0 +1,13 @@
+I"<div class="post-image">
+    <img src="/assets/msc/style.svg" height="280px" />
+</div>
+
+<p>The human ability to reduce noise from different sources and types (babbling noise, white noise, musical noise, non-stationary noise…) is yet unrivalled and, if many signal processing algorithms demonstrate increasing performances, the gap between the available technologies and the treatment needed for hearing aids for example is still wide. In this study, we dive into Neural Networks with a strong inspiration from the structure of the human auditory periphery system to try and design nonlinear filters for adaptive and intelligent nosie reduction.</p>
+
+<div class="repair">
+	<h1>Currently building</h1>
+	<div class="post-image">
+	<img src="/assets/css/repair.jpeg" />
+</div>
+</div>
+:ET
