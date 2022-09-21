@@ -596,16 +596,17 @@ div.resume {
 	padding-bottom: 23px;
 } */
 
-.contact-details {
+/* .contact-details {
 	width: 80%;
 	margin: auto;
 	display: flex;
-}
+} */
 
 .contact-details ul > li {
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 10px;
+	width: 80%;
 }
 
 .contact-details li:hover {
