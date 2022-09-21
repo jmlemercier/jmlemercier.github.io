@@ -597,13 +597,15 @@ div.resume {
 } */
 
 .contact-details {
-	width: 50%;
+	width: 80%;
 	margin: auto;
 	display: flex;
 }
 
 .contact-details ul > li {
 	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .contact-details li:hover {
