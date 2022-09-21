@@ -567,31 +567,37 @@ div.resume {
 	width: 20%;
 	color: black;
 	/*padding-left: 40px;*/
-	padding-top: 200px;
+	padding-top: 77px;
 	font-size: 20px;
 }
 
 .contact-bracket {
-	width: 50%;
+	width: 35%;
 	display: flex;
 	margin-top: 6px;
-	margin-left: -10px;
+	margin-left: -5px;
 }
 
 .contacts {
-	width: 30%;
+	/* width: 42%;
 	float: right;
 	font-size: 22px;
 	padding-top: 22.5px;
 	padding-right: 0px; 
 	padding-left: 0px;
-	margin-left: 30px;
+	margin-left: 30px;*/
+	width: 50%;
+	margin: auto;
 	display: flex;
 }
 
 .contact-types li {
 	font-weight: bold;
 	padding-bottom: 23px;
+}
+
+.contact-details li {
+	display: inline-block;
 }
 
 .contact-details li:hover {
