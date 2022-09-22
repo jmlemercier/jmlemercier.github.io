@@ -563,20 +563,22 @@ div.resume {
     font-size: 20px;
 }
 
-.contact-title {
+/* .contact-title {
 	width: 20%;
 	color: black;
-	/*padding-left: 40px;*/
+	padding-left: 40px;
 	padding-top: 77px;
 	font-size: 20px;
-}
+} */
 
-.contact-bracket {
+/* .contact-picture {} */
+
+/* .contact-bracket {
 	width: 35%;
 	display: flex;
 	margin-top: 6px;
 	margin-left: -5px;
-}
+} */
 
 /* .contacts {
 	width: 42%;
@@ -600,14 +602,18 @@ div.resume {
 	margin: auto;
 }
 
-.contact-details ul > li {
+.contact ul > li {
+	display: inline-block;
+}
+
+.contact-details-list ul > li {
 	display: inline-block;
 	/* margin-left: 10px;
 	margin-right: 10px; */
-	width: 80%;
+	width: 50%;
 }
 
-.contact-details li:hover {
+.contact-details-list li:hover {
 	opacity: 0.7;
 }
 
