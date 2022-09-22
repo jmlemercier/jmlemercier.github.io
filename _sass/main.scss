@@ -598,12 +598,19 @@ div.resume {
 	padding-bottom: 23px;
 } */
 
-.contact-details {
+.contact div {
+	margin-top: 30px;
+}
+.contact ul {
 	margin: auto;
 }
 
 .contact ul > li {
 	display: inline-block;
+}
+
+.contact-details li {
+	padding-bottom: 80px;
 }
 
 .contact-details-list ul > li {
