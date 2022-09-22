@@ -559,7 +559,7 @@ ul.courses_list .keypoint, ul.skills_list .keypoint  {
 
 div.resume {
 	padding-top: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 20px;
 }
 
@@ -596,11 +596,9 @@ div.resume {
 	padding-bottom: 23px;
 } */
 
-/* .contact-details {
-	width: 80%;
+.contact-details {
 	margin: auto;
-	display: flex;
-} */
+}
 
 .contact-details ul > li {
 	display: inline-block;
