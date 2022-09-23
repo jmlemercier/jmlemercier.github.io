@@ -603,6 +603,7 @@ div.resume {
 }
 .contact ul {
 	margin: auto;
+	width: 90%; 
 }
 
 .contact ul > li {
@@ -610,14 +611,15 @@ div.resume {
 }
 
 .contact-details li {
-	padding-bottom: 80px;
+	padding-bottom: 90px;
+	/* width: 50%; */
 }
 
 .contact-details-list ul > li {
 	display: inline-block;
-	/* margin-left: 10px;
-	margin-right: 10px; */
-	width: 50%;
+	margin-left: 10px;
+	padding-bottom: 90px;
+	/* margin-right: 10px; */
 }
 
 .contact-details-list li:hover {
