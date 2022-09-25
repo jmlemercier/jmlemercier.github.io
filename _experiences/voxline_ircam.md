@@ -13,6 +13,3 @@ Voxline Audio is a company of 4, awarded Prix Bettencourt in 2018 for its design
 For these latter topics, I lead research work in signal processing and made use of innovative methods of nonlinear parameters identification designed by D. Bouvier (IRCAM) using homophase and homogenous signals separation and Volterra series decomposition.
 
 Read <a class="inner-link" href="{% post_url 2020-01-13-voxline %}">this article</a> on the modelling and identification of nonlinearities in Voxline prototypes.
-
-Read <a class="inner-link" href="{% post_url 2020-01-12-HPS %}">this article</a> on the analysis of harmonic content for Volterra-representable systems involving Homophase Signals separation.
-
