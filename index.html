@@ -8,6 +8,7 @@ title: Home
     <li>
       <a href="{{ post.url }}" class="post-title">{{ post.date | date_to_string }} - {{ post.title }}</a>
       <p class="post-excerpt">{{ post.excerpt }}</p>
+	  <p class="authors"> Authors : {{ post.authors }}</p> 
 
       <div class="keywords">
 		<ul class="keywords">
