@@ -1,7 +1,7 @@
 ---
 type: experience
 title: Electroacoustic study of innovative loudspeaker prototypes
-company: IRCAM - 'https://www.ircam.fr' - '/experience/logo_ircam.jpg', Voxline - 'voxlineaudio.com' - '/experience/logo_voxline.jpg'
+company: IRCAM - 'https://www.ircam.fr' - '/experience/logo_ircam.jpg', Voxline - 'voxlineaudio.fr' - '/experience/logo_voxline.jpg'
 full_company: IRCAM & Voxline Audio
 place: Paris, France
 period: Mar. 2019 - Aug. 2019
