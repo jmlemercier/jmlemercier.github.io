@@ -1,7 +1,7 @@
 ---
 type: experience
 title: PhD - AI-supported Speech Dereverberation for Hearing Devices
-company: Universität Hamburg - 'https://www.inf.uni-hamburg.de/en/inst/ab/sp/people/lemercier.html' - '/experience/uhh.png', Advanced Bionics - 'advancedbionics.com' - '/experience/ab.jpg'
+company: Universität Hamburg - 'https://www.inf.uni-hamburg.de/en/inst/ab/sp/people/lemercier.html' - '/experience/uhh.png', Advanced Bionics - 'https://www.advancedbionics.com' - '/experience/ab.png'
 full_company: Universität Hamburg & Advanced Bionics
 place: Hamburg, Germany
 period: Jun. 2020 - Sep. 2023
