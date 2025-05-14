@@ -8,6 +8,7 @@ period: Jun. 2020 - Sep. 2023
 skills: Pytorch, Matlab, Speech Processing, Acoustics, Stochastic Calculus
 ---
 
-I am currently working as a PhD student in the Signal Processing lab of Universität Hamburg under the supervision of Prof. Dr-Ing. Timo Gerkmann, in collaboration with Advanced Bionics, one of the major companies for cochlear implants in Europe. 
+AI-based Speech Dereverberation in Signal Processing lab of University Hamburg under the supervision of Prof. Dr-Ing. Timo Gerkmann.
 
-My focus is on neural network-based speech processing for dereverberation in hearing devices. Our aim is to develop new, real-time capable algorithms capable of dereveberating and denoising the mixture speech received at the hearing device microphone array. The techniques used range from DNN-assisted real-time Kalman filtering to purely DNN-based multi-frame single-channel dereverberation and score-based generative modelling
+- Hybridation of traditional signal processing and neural networks for real-time capable dereverberation in hearing devices (collaboration with Advanced Bionics).
+- Diffusion models for general speech restoration and inverse problems.
