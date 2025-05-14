@@ -1,6 +1,6 @@
 ---
 type: experience
-title: MSc Communications & Signal Processing
+title: MSc - Communications & Signal Processing
 company: Imperial College London - 'https://imperial.ac.uk' - '/experience/logo_imperial.jpg'
 full_company: Imperial College London
 linkto: 'http://www.imperial.ac.uk/study/pg/electrical-engineering/communications-signal-processing/'

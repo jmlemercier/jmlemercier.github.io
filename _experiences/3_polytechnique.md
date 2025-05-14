@@ -1,7 +1,7 @@
 ---
 type: experience
 # linkto: 'https://www.polytechnique.edu/en/ingenieur-polytechnicien-program'
-title: MSc Electrical Engineering and Computer Science - Ingénieur Polytechnicien
+title: MSc - Electrical Engineering and Computer Science - Ingénieur Polytechnicien
 company: Ecole Polytechnique - 'https://www.polytechnique.edu' - '/experience/logo_x.jpg'
 full_company: Ecole Polytechnique - Institut Polytechnique de Paris
 place: Paris, France

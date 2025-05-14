@@ -1,6 +1,6 @@
 ---
 type: experience
-title: PhD - AI-supported Speech Dereverberation for Hearing Devices
+title: PhD - Model-based Techniques and Diffusion Models for Speech Dereverberation
 company: Universität Hamburg - 'https://www.inf.uni-hamburg.de/en/inst/ab/sp/people/lemercier.html' - '/experience/uhh.png', Advanced Bionics - 'https://www.advancedbionics.com' - '/experience/ab.png'
 full_company: Universität Hamburg & Advanced Bionics
 place: Hamburg, Germany
