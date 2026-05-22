@@ -1,31 +1,143 @@
----
-layout: default
-title: Home
----
-<ul class="post-list">
-  {% for post in site.posts %}
-    <div class ="exp-post">
-    <li>
-      <a href="{{ post.url }}" class="post-title">{{ post.date | date_to_string }} - {{ post.title }}</a>
-      <p class="post-excerpt">{{ post.excerpt }}</p>
-	  <p class="authors"> Authors : {{ post.authors }}</p> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jean-Marie Lemercier — applied scientist at NVIDIA, working on diffusion models for speech and language.">
+    <meta name="author" content="Jean-Marie Lemercier">
+    <meta name="keywords" content="Jean-Marie Lemercier, speech processing, diffusion models, dereverberation, machine learning">
 
-      <div class="keywords">
-		<ul class="keywords">
-			<li class="keyword-title"> Keywords : </li>
-			<li class="keyword_list">
-				<ul class="keyword_list">
-				{% assign keys = post.keywords | split: ", " %}
-					{% for key in keys %}
-						<li class="keyword"> {{ key }} </li>
-					{% endfor %}
-				</ul> 
-			</li>
-	</ul>
-</div>
+    <title>Jean-Marie Lemercier</title>
 
-    </li>
-   </div>
-   <hr>
-  {% endfor %}
-</ul>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'dark' && t !== 'light') t = 'light';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="icon-light" aria-hidden="true">◐</span>
+        <span class="icon-dark" aria-hidden="true">◑</span>
+    </button>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="active" aria-current="page">About</a>
+            <a href="publications.html">Publications</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="header-section">
+            <div class="header-info">
+                <h1>Jean-Marie Lemercier</h1>
+                <p class="role">Applied Scientist · NVIDIA · Berlin</p>
+
+                <div class="contact-info">
+                    <p>jmlemercier at ieee dot org</p>
+                </div>
+
+                <div class="social-links" aria-label="Social links">
+                    <a href="https://github.com/jmlemercier" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="assets/icons/github.png" alt="GitHub" width="26" height="26">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jean-marie-lemercier-55ab96137" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="assets/icons/linkedin.png" alt="LinkedIn" width="26" height="26">
+                    </a>
+                    <a href="https://www.twitter.com/jm_lemercier" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <img src="assets/icons/twitter.png" alt="Twitter" width="26" height="26">
+                    </a>
+                </div>
+            </div>
+
+            <figure class="header-photo">
+                <!-- <img src="assets/me.jpeg" alt="Jean-Marie Lemercier" width="400" height="400"> -->
+                <img src="assets/me.png" alt="Jean-Marie Lemercier" width="400" height="400">
+            </figure>
+        </header>
+
+        <section class="bio-section" aria-labelledby="bio-heading">
+            <h2 id="bio-heading" class="visually-hidden">About</h2>
+
+            <p>I am a speech processing and machine learning researcher. I currently work at <a href="https://www.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA</a> on diffusion models for speech and language modelling.</p>
+
+            <p>I received an MSc in Electrical Engineering from <a href="https://www.polytechnique.edu" target="_blank" rel="noopener noreferrer">École Polytechnique</a> and an MSc in Communications &amp; Signal Processing from <a href="https://imperial.ac.uk" target="_blank" rel="noopener noreferrer">Imperial College London</a>, and a PhD in AI-based Speech Dereverberation from <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/people/lemercier.html" target="_blank" rel="noopener noreferrer">Universität Hamburg</a> in collaboration with Advanced Bionics.</p>
+
+            <p>Feel free to reach out for a collaboration or any question related to my work.</p>
+        </section>
+
+        <section class="experience-section" aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="section-header">Experience</h2>
+
+            <ol class="experience-list">
+                <li class="experience-item">
+                    <div class="experience-period">May 2025 – present</div>
+                    <div class="experience-body">
+                        <h3>Applied Scientist — NVIDIA</h3>
+                        <p class="place">Berlin, Germany</p>
+                        <p>Diffusion models for speech and language modelling, in the team of Ante Jukić.</p>
+                    </div>
+                </li>
+
+                <li class="experience-item">
+                    <div class="experience-period">Jun 2020 – Sep 2023</div>
+                    <div class="experience-body">
+                        <h3>PhD — Universität Hamburg &amp; Advanced Bionics</h3>
+                        <p class="place">Hamburg, Germany</p>
+                        <p>Model-based techniques and diffusion models for speech dereverberation, under the supervision of Prof. Dr.-Ing. Timo Gerkmann. Hybridization of traditional signal processing and neural networks for real-time dereverberation in hearing devices (with Advanced Bionics), and diffusion models for general speech restoration and inverse problems.</p>
+                    </div>
+                </li>
+
+                <li class="experience-item">
+                    <div class="experience-period">Sep 2019 – Aug 2020</div>
+                    <div class="experience-body">
+                        <h3>MSc — Imperial College London</h3>
+                        <p class="place">London, United Kingdom</p>
+                        <p>Communications &amp; Signal Processing. MSc thesis on bio-inspired DNN encoders for speech enhancement and separation, supervised by Dr. Dan F. M. Goodman and Prof. Dr.-Ing. Timo Gerkmann.</p>
+                    </div>
+                </li>
+
+                <li class="experience-item">
+                    <div class="experience-period">Sep 2016 – Aug 2019</div>
+                    <div class="experience-body">
+                        <h3>MSc — École Polytechnique (IP Paris)</h3>
+                        <p class="place">Palaiseau, France</p>
+                        <p>Ingénieur Polytechnicien programme. Electrical Engineering &amp; Computer Science, with a focus on signal processing, applied mathematics and machine learning.</p>
+                    </div>
+                </li>
+
+                <li class="experience-item">
+                    <div class="experience-period">Mar 2019 – Aug 2019</div>
+                    <div class="experience-body">
+                        <h3>Research intern — IRCAM &amp; Voxline Audio</h3>
+                        <p class="place">Paris, France</p>
+                        <p>Electroacoustic study of innovative loudspeaker prototypes: directivity, port-Hamiltonian modelling of the transduction chain, and harmonic-content analysis using homophase signal decomposition.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="copyright-year">2026</span> Jean-Marie Lemercier
+    </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

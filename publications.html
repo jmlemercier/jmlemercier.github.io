@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications by Jean-Marie Lemercier — diffusion models for speech and language.">
+    <meta name="author" content="Jean-Marie Lemercier">
+    <meta name="keywords" content="Jean-Marie Lemercier, publications, diffusion models, speech enhancement, dereverberation, machine learning">
+
+    <title>Publications — Jean-Marie Lemercier</title>
+
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'dark' && t !== 'light') t = 'light';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="icon-light" aria-hidden="true">◐</span>
+        <span class="icon-dark" aria-hidden="true">◑</span>
+    </button>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html">About</a>
+            <a href="publications.html" class="active" aria-current="page">Publications</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content">
+            <h1 class="section-header">Publications</h1>
+
+            <!-- 2026 — DiLaDiff -->
+            <article class="paper-item">
+                <h2 class="paper-title">DiLaDiff: Distilled Latent-Augmented Diffusion for Language Modeling</h2>
+                <p class="paper-venue">arXiv preprint · NeurIPS 2026 submission</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Tomas Geffner, Morteza Mardani, Karsten Kreis, Arash Vahdat, Ante Jukić</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/diladiff/figure.png" alt="DiLaDiff architecture: encoder produces a latent z, a latent denoiser models its prior with continuous diffusion (self-distilled with MeanFlow), and a discrete decoder samples tokens conditioned on z via masked diffusion.">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Diffusion language models intrinsically fail to capture correlations between decoded tokens, which leads to a harsh trade-off between sampling quality and throughput. To solve this issue, we propose DiLaDiff, a variant of masked diffusion language models with three components: (1) a continuous latent space with semantic capabilities, learned by an auto-encoder fine-tuned from an existing masked diffusion language model; (2) a latent diffusion model learning the prior over the encoder distribution; (3) a consistency model distilling the learned prior into a few-step latent generative model. Even without distillation, our latent-guided diffusion model outperforms the masked diffusion baseline while significantly accelerating inference. Consistency distillation further lowers the computational overhead of continuous diffusion, such that the latent is generated in negligible time compared to discrete decoding.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="diladiff/assets/DiLaDiff.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                    <a href="diladiff/" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- 2025-02 — PhD dissertation -->
+            <article class="paper-item">
+                <h2 class="paper-title">Model-based Techniques and Diffusion Models for Speech Dereverberation</h2>
+                <p class="paper-venue">PhD Dissertation · Universität Hamburg · February 2025</p>
+                <p class="paper-authors">Jean-Marie Lemercier — supervised by Prof. Dr.-Ing. Timo Gerkmann</p>
+
+                <div class="paper-abstract">
+                    <p>My PhD thesis on the joint use of model-based techniques and diffusion models for speech dereverberation, conducted in the Signal Processing group at Universität Hamburg in collaboration with Advanced Bionics. The first part covers hybrid signal-processing / DNN methods for real-time dereverberation on hearing devices (online WPE, Kalman filtering, multi-frame post-filtering). The second part introduces score-based generative models for general speech restoration, both in the informed (known room impulse response) and blind / unsupervised regimes, culminating in StoRM (stochastic regeneration) and BUDDy (blind unsupervised dereverberation via posterior sampling).</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/11545/1/Jean-Marie%20Lemercier%20-%20Model-based%20Techniques%20and%20Diffusion%20Models%20for%20Speech%20Dereverberation%20-%20final.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                </div>
+            </article>
+
+            <!-- 2024-10 — BUDDy (extended) — TASL 2024 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Unsupervised Blind Joint Dereverberation and Room Acoustics Estimation with Diffusion Models</h2>
+                <p class="paper-venue">IEEE/ACM TASL · submitted 2024</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Eloi Moliner, Simon Welker, Vesa Välimäki, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/buddy-extended/buddy.png" alt="BUDDy joint dereverberation and RIR estimation pipeline">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>This paper presents an unsupervised method for single-channel blind dereverberation and room impulse response (RIR) estimation, called BUDDy. The algorithm is rooted in Bayesian posterior sampling: it combines a likelihood model enforcing fidelity to the reverberant measurement, and an anechoic speech prior implemented by an unconditional diffusion model. We design a parametric filter representing the RIR, with exponential decay for each frequency subband. Room acoustics estimation and speech dereverberation are jointly carried out, as the filter parameters are iteratively estimated and the speech utterance refined along the reverse diffusion trajectory. In a blind scenario where the RIR is unknown, BUDDy successfully performs speech dereverberation in various acoustic scenarios, significantly outperforming other blind unsupervised baselines. Unlike supervised methods, which often struggle to generalize, BUDDy seamlessly adapts to different acoustic conditions. This paper extends our previous work by offering new experimental results and insights into the algorithm's versatility, including high-resolution singing voice dereverberation, robustness to RIR estimation errors, and a comparison to state-of-the-art supervised DNN-based estimators on mismatched conditions.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2408.07472" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/iwaenc2024-buddy.html" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- 2024-09 — BUDDy — IWAENC 2024 -->
+            <article class="paper-item">
+                <h2 class="paper-title">BUDDy — Single-Channel Blind Unsupervised Dereverberation with Diffusion Models</h2>
+                <p class="paper-venue">IWAENC 2024</p>
+                <p class="paper-authors">Eloi Moliner, Jean-Marie Lemercier, Simon Welker, Timo Gerkmann, Vesa Välimäki</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/buddy/buddy.png" alt="BUDDy unsupervised blind dereverberation overview">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>We present an unsupervised single-channel method for joint blind dereverberation and room impulse response estimation, based on posterior sampling with diffusion models. We parameterize the reverberation operator using a filter with exponential decay for each frequency subband, and iteratively estimate the corresponding parameters as the speech utterance gets refined along the reverse diffusion trajectory. A measurement consistency criterion enforces the fidelity of the generated speech with the reverberant measurement, while an unconditional diffusion model implements a strong prior for clean speech generation. Without any knowledge of the room impulse response nor any coupled reverberant-anechoic data, we can successfully perform dereverberation in various acoustic scenarios. Our method significantly outperforms previous blind unsupervised baselines, and we demonstrate its increased robustness to unseen acoustic conditions in comparison to blind supervised methods.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2405.04272" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/iwaenc2024-buddy.html" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- 2024-07 — Independence-promoting loss for music LM — ICML 2024 -->
+            <article class="paper-item">
+                <h2 class="paper-title">An Independence-promoting Loss for Music Generation with Language Models</h2>
+                <p class="paper-venue">ICML 2024</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Simon Rouard, Jade Copet, Yossi Adi, Alexandre Défossez</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/independence-music-lm/icml.png" alt="Independence-promoting loss for music generation">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Music generation schemes using language modeling rely on a vocabulary of audio tokens, generally provided as codes in a discrete latent space learnt by an auto-encoder. Multi-stage quantizers are often employed to produce these tokens, therefore the decoding strategy used for token prediction must be adapted to account for multiple codebooks: either it should model the joint distribution over all codebooks, or fit the product of the codebook marginal distributions. Modelling the joint distribution requires a costly increase in the number of auto-regressive steps, while fitting the product of the marginals yields an inexact model unless the codebooks are mutually independent. In this work, we introduce an independence-promoting loss to regularize the auto-encoder used as the tokenizer in language models for music generation. The proposed loss is a proxy for mutual information based on the maximum mean discrepancy principle, applied in reproducible kernel Hilbert spaces. Our criterion is simple to implement and train, and it is generalizable to other multi-stream codecs. We show that it reduces the statistical dependence between codebooks during auto-encoding, leading to higher generated music quality when modelling the product of the marginal distributions, while generating audio much faster than the joint distribution model.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2406.02315" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://jmlemercier.github.io/encodec-mmd.github.io/" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- 2024-02 — Diffusion Models for Audio Restoration — IEEE SPM -->
+            <article class="paper-item">
+                <h2 class="paper-title">Diffusion Models for Audio Restoration</h2>
+                <p class="paper-venue">IEEE Signal Processing Magazine · 2024</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Julius Richter, Simon Welker, Eloi Moliner, Vesa Välimäki, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/diffusion-audio-restoration/figure.png" alt="Overview of diffusion models for audio restoration">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>With the development of audio playback devices and fast data transmission, the demand for high sound quality is rising for both entertainment and communications. In this quest for better sound quality, challenges emerge from distortions and interferences originating at the recording side or caused by an imperfect transmission pipeline. Audio restoration methods aim to recover clean sound signals from the corrupted input data. We present here audio restoration algorithms based on diffusion models, with a focus on speech enhancement and music restoration tasks. Traditional approaches, often grounded in handcrafted rules and statistical heuristics, have shaped our understanding of audio signals; in the past decades, a notable shift has occurred towards data-driven methods that exploit the modeling capabilities of deep neural networks. Diffusion models in particular have emerged as powerful generative techniques for learning complex data distributions. We aim to show that they can combine the best of both worlds, offering audio restoration algorithms with a good degree of interpretability and a remarkable performance in terms of sound quality.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2402.09821" target="_blank" rel="noopener noreferrer">arXiv</a>
+                </div>
+            </article>
+
+            <!-- 2023-10 — Diffusion posterior sampling for informed single-channel dereverberation — WASPAA 2023 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Diffusion Posterior Sampling for Informed Single-Channel Dereverberation</h2>
+                <p class="paper-venue">WASPAA 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Simon Welker, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/dps-dereverb/dps.png" alt="Diffusion posterior sampling for informed dereverberation">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>We present an informed single-channel dereverberation method based on conditional generation with diffusion models. With knowledge of the room impulse response, the anechoic utterance is generated via reverse diffusion using a measurement consistency criterion coupled with a neural network that represents the clean speech prior. The proposed approach is largely more robust to measurement noise compared to a state-of-the-art informed single-channel dereverberation method, especially for non-stationary noise. Furthermore, we compare to other blind dereverberation methods using diffusion models and show superiority of the proposed approach for large reverberation times. We motivate the presented algorithm by introducing an extension for blind dereverberation allowing joint estimation of the room impulse response and anechoic speech.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2306.12286" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://ieeexplore.ieee.org/document/10248108" target="_blank" rel="noopener noreferrer">IEEE</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/waspaa2023-derevdps.html" target="_blank" rel="noopener noreferrer">Project</a>
+                    <a href="https://github.com/sp-uhh/derevdps" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </article>
+
+            <!-- 2023-09 — Wind Noise Reduction — ITG 2023 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Wind Noise Reduction with a Diffusion-based Stochastic Regeneration Model</h2>
+                <p class="paper-venue">VDE 15th ITG Conference on Speech Communication · 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Joachim Thiemann, Raphael Koning, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/wind-noise-diff/figure.png" alt="Diffusion-based stochastic regeneration for wind noise reduction">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>In this paper we present a method for single-channel wind noise reduction using our previously proposed diffusion-based stochastic regeneration model combining predictive and generative modelling. We introduce a non-additive speech-in-noise model to account for the non-linear deformation of the membrane caused by the wind flow and possible clipping. We show that our stochastic regeneration model outperforms other neural-network-based wind noise reduction methods as well as purely predictive and generative models, on a dataset using simulated and real-recorded wind noise. We further show that the proposed method generalizes well by testing on an unseen dataset with real-recorded wind noise.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2306.12867" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://www.vde-verlag.de/proceedings-en/456164022.html" target="_blank" rel="noopener noreferrer">VDE</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/itg2023-wind.html" target="_blank" rel="noopener noreferrer">Project</a>
+                    <a href="https://github.com/sp-uhh/storm" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </article>
+
+            <!-- 2023-08 — StoRM — TASL 2023 -->
+            <article class="paper-item">
+                <h2 class="paper-title">StoRM — A Diffusion-based Stochastic Regeneration Model for Speech Enhancement and Dereverberation</h2>
+                <p class="paper-venue">IEEE/ACM TASL · 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Julius Richter, Simon Welker, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/storm/storm.png" alt="StoRM stochastic regeneration model architecture">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Diffusion models have shown a great ability at bridging the performance gap between predictive and generative approaches for speech enhancement. We have shown that they may even outperform their predictive counterparts for non-additive corruption types or when they are evaluated on mismatched conditions. However, diffusion models suffer from a high computational burden, mainly as they require running a neural network for each reverse diffusion step. As generative approaches they may also produce vocalizing and breathing artifacts in adverse conditions. In comparison, in such difficult scenarios, predictive models typically do not produce such artifacts but tend to distort the target speech instead. In this work, we present a stochastic regeneration approach where an estimate given by a predictive model is provided as a guide for further diffusion. The proposed approach uses the predictive model to remove the vocalizing and breathing artifacts while producing very high quality samples thanks to the diffusion model, even in adverse conditions. We further show that this enables lighter sampling schemes with fewer diffusion steps without sacrificing quality, lifting the computational burden by an order of magnitude.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2212.11851" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://ieeexplore.ieee.org/document/10180108" target="_blank" rel="noopener noreferrer">IEEE</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm.html" target="_blank" rel="noopener noreferrer">Project</a>
+                    <a href="https://github.com/sp-uhh/storm" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </article>
+
+            <!-- 2023-05 — Deep subband filtering — Interspeech 2023 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Extending DNN-based Multiplicative Masking to Deep Subband Filtering for Improved Dereverberation</h2>
+                <p class="paper-venue">Interspeech 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Julian Tobergte, Timo Gerkmann</p>
+
+                <!-- <div class="paper-media">
+                    <img src="assets/papers/subband-derev/dsfe.png" alt="Deep subband filtering extension architecture">
+                </div>
+
+                <div class="paper-media">
+                    <img src="assets/papers/subband-derev/dsfe_results.png" alt="Dereverberation vs denoising performance metrics across filter taps">
+                </div> -->
+
+                <div class="paper-abstract">
+                    <p>In this paper, we present a scheme for extending deep neural network-based multiplicative maskers to deep subband filters for speech restoration in the time-frequency domain. The resulting method can be generically applied to any deep neural network providing masks in the time-frequency domain, while requiring only few more trainable parameters and a computational overhead that is negligible for state-of-the-art neural networks. We demonstrate that the resulting deep subband filtering scheme outperforms multiplicative masking for dereverberation while leaving the denoising performance virtually the same. We argue that this is because deep subband filtering in the time-frequency domain fits the subband approximation often assumed in the dereverberation literature, whereas multiplicative masking corresponds to the narrowband approximation generally employed in denoising.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2303.00529" target="_blank" rel="noopener noreferrer">arXiv</a>
+                </div>
+            </article>
+
+            <!-- 2023-04 — Lightweight Dereverberation — EURASIP -->
+            <article class="paper-item">
+                <h2 class="paper-title">A Neural Network-supported Two-stage Algorithm for Lightweight Dereverberation on Hearing Devices</h2>
+                <p class="paper-venue">EURASIP Journal on Audio, Speech, and Music Processing · 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Joachim Thiemann, Raphael Koning, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/lightweight-derev/e2epf.png" alt="Spectrograms showing two-stage lightweight dereverberation result">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>A two-stage lightweight online dereverberation algorithm for hearing devices is presented. The approach combines a multi-channel multi-frame linear filter with a single-channel single-frame post-filter. Both components rely on power spectral density (PSD) estimates provided by deep neural networks. By deriving new metrics analyzing the dereverberation performance in various time ranges, we confirm that directly optimizing for a criterion at the output of the multi-channel linear filtering stage results in a more efficient dereverberation than placing the criterion at the output of the DNN to optimize the PSD estimation. Training this stage end-to-end further removes the reverberation in the range accessible to the filter, increasing the early-to-moderate reverberation ratio. The proposed two-stage system is shown to be both very effective in terms of dereverberation performance and computational demands, and can be adapted to the needs of different types of hearing-device users by controlling the amount of reduction of early reflections.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2204.02978" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://asmp-eurasipjournals.springeropen.com/articles/10.1186/s13636-023-00285-8" target="_blank" rel="noopener noreferrer">Springer</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/tasl2022-dereverberation" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- 2022-12 — Diff vs Disc — ICASSP 2023 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Analysing Diffusion-based Generative Approaches versus Discriminative Approaches for Speech Restoration</h2>
+                <p class="paper-venue">ICASSP 2023</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Julius Richter, Simon Welker, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/diff-vs-disc-restoration/analysing.png" alt="Predictive vs generative approaches to speech restoration">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Diffusion-based generative models have had a high impact on the computer vision and speech processing communities. Beyond data generation tasks, they have also been employed for data restoration tasks like speech enhancement and dereverberation. While discriminative models have traditionally been argued to be more powerful e.g. for speech enhancement, generative diffusion approaches have recently been shown to narrow this performance gap considerably. In this paper, we systematically compare the performance of generative diffusion models and discriminative approaches on different speech restoration tasks. We extend our prior contributions on diffusion-based speech enhancement in the complex time-frequency domain to bandwidth extension, then compare to a discriminatively trained neural network with the same architecture on three restoration tasks: speech denoising, dereverberation and bandwidth extension. We observe that the generative approach performs globally better than its discriminative counterpart on all tasks, with the strongest benefit for non-additive distortion models such as dereverberation and bandwidth extension.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2211.02397" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://ieeexplore.ieee.org/document/10095258" target="_blank" rel="noopener noreferrer">IEEE</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/sgmse-multitask.html" target="_blank" rel="noopener noreferrer">Project</a>
+                    <a href="https://github.com/sp-uhh/sgmse/tree/icassp_2023" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </article>
+
+            <!-- 2022-06 — Kalman-WPE — Interspeech 2022 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Neural Network-augmented Kalman Filtering for Robust Online Speech Dereverberation in Noisy Reverberant Environments</h2>
+                <p class="paper-venue">Interspeech 2022</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Joachim Thiemann, Raphael Konig, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/kalman-derev/kalman.png" alt="Neural network-augmented Kalman filtering for dereverberation">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>A neural network-augmented algorithm for noise-robust online dereverberation with a Kalman filtering variant of the weighted prediction error (WPE) method is proposed. The filter stochastic variations are predicted by a deep neural network trained end-to-end using the filter residual error and signal characteristics. The presented framework allows for robust dereverberation on a single-channel noisy reverberant dataset similar to WHAMR!. The proposed approach avoids the distortions introduced by the Kalman filtering WPE in noisy conditions by correcting the filter variations estimation in a data-driven way, increasing the robustness of the method to noisy scenarios. It yields strong dereverberation and denoising performance compared to a DNN-supported recursive least squares variant of WPE, especially for highly noisy inputs.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2204.02741" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://www.isca-speech.org/archive/interspeech_2022/lemercier22_interspeech.html" target="_blank" rel="noopener noreferrer">ISCA</a>
+                </div>
+            </article>
+
+            <!-- 2021-11 — Online derev for hearing devices — ICASSP 2022 -->
+            <article class="paper-item">
+                <h2 class="paper-title">Customizable End-to-end Optimization of Online Neural Network-supported Dereverberation for Hearing Devices</h2>
+                <p class="paper-venue">ICASSP 2022</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Joachim Thiemann, Raphael Konig, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/online-derev-hd/e2e.png" alt="End-to-end online DNN-supported WPE dereverberation for hearing devices">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>This work focuses on online dereverberation for hearing devices using the weighted prediction error (WPE) algorithm. WPE filtering requires an estimate of the target speech power spectral density (PSD). Recently, deep neural networks have been used for this task; however, these approaches optimize the PSD estimate which only indirectly affects the WPE output, thus potentially resulting in limited dereverberation. In this paper, we propose an end-to-end approach specialized for online processing, that directly optimizes the dereverberated output signal. We further propose to adapt it to the needs of different types of hearing-device users by modifying the optimization target as well as the WPE algorithm characteristics used in training. The proposed end-to-end approach outperforms the traditional and conventional DNN-supported WPEs on a noise-free version of the WHAMR! dataset.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2204.02694" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <a href="https://ieeexplore.ieee.org/document/9746235" target="_blank" rel="noopener noreferrer">IEEE</a>
+                    <a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/tasl2022-dereverberation" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <!-- ============================================================
+                 The three entries below (ITG 2021, MSc 2020, Voxline 2020)
+                 are intentionally hidden — outdated or out of scope today.
+                 Uncomment to restore.
+                 ============================================================ -->
+            <!--
+            <article class="paper-item">
+                <h2 class="paper-title">An Integrated Deep Clustering-Based System for Speaker Count Agnostic Speech Separation</h2>
+                <p class="paper-venue">14th ITG Conference on Speech Communication · 2021</p>
+                <p class="paper-authors">Jean-Marie Lemercier, Leroy Bartel, David Ditter, Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/deep-clustering-sep/figure.png" alt="Deep clustering-based speech separation system">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>This paper proposes to unify two deep-learning methods, CountNet and Deep Clustering, designed for speaker count and separation respectively, in order to perform speaker count agnostic speech separation. Two approaches are compared, where the speaker count estimation and separation subnetworks are either trained separately or jointly. Training and evaluation are conducted on a tailored dataset WSJ0-Kmix, which extends the WSJ0-2mix and WSJ0-3mix datasets to an arbitrary number of speakers. Results show that both systems are capable of separating up to four sources without prior information on the number of speakers. The joint approach is able to perform similarly to its separate counterpart while using fewer parameters and simplifying the overall architecture.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/9657520" target="_blank" rel="noopener noreferrer">IEEE</a>
+                    <a href="https://jmlemercier.github.io/deep-clustering-sep/" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <article class="paper-item">
+                <h2 class="paper-title">Bio-inspired Encoders for Temporal Convolutional Networks performing Speech Enhancement and Separation</h2>
+                <p class="paper-venue">MSc Thesis · Imperial College London · 2020</p>
+                <p class="paper-authors">Jean-Marie Lemercier — supervised by Dr. Dan F. M. Goodman and Prof. Dr.-Ing. Timo Gerkmann</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/bio-inspired-tcn/figure.svg" alt="Bio-inspired encoders for speech enhancement and separation">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Human evolution has shaped and optimized the auditory system to analyse natural sounds, especially speech. Recent work has shown that, when given the opportunity of learning a specific filterbank for speech analysis, a neural network can converge to a solution strikingly similar to the best model we have of the human cochlea — the Gammatone filterbank. Motivated by this, we investigate another mechanism of the auditory system: phase-locking, the ability of some neurons to synchronize their firing activity to the stimulus frequency. We propose an encoder model enabling phase-locking to be learnt in a neural network, and look at whether the resulting network is using this model to learn a behaviour similar to phase-locking, or to derive another optimal strategy. In a further step, we add phase-shift parameters in the analysis filterbank and show that the network converges to a solution where the maximal discriminative power is obtained in order to produce the most diverse representations out of redundant information.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="assets/papers/bio-inspired-tcn/report.pdf" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a href="https://jmlemercier.github.io/bio-inspired-tcn/" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+
+            <article class="paper-item">
+                <h2 class="paper-title">Electroacoustic Study of Innovative Loudspeaker Prototypes</h2>
+                <p class="paper-venue">Research project · IRCAM &amp; Voxline Audio · 2019–2020</p>
+                <p class="paper-authors">Jean-Marie Lemercier — in collaboration with David Bouvier (IRCAM) and the Voxline Audio team</p>
+
+                <div class="paper-media">
+                    <img src="assets/papers/voxline-loudspeakers/figure.jpg" alt="Voxline Audio loudspeaker electroacoustic study">
+                </div>
+
+                <div class="paper-abstract">
+                    <p>Paris-based Voxline Audio designs audiophile, hand-crafted loudspeakers equipped with linear motors, bending-waves panels and natural materials, along with their associated electronics. In collaboration with IRCAM, we led a six-month characterization study of these prototypes, focusing on the acoustic emission directivity (measured by traditional means in anechoic environment), a port-Hamiltonian modelling of the transduction chain with extended Thiele-Small parameters for passive energy-conserving components, and a harmonic-content analysis using both traditional spectrum analysis and recent methods such as homophase signal decomposition. The model was built with the aim of identifying Thiele-Small parameters, understanding the dominant sources of nonlinear behaviour, and providing Voxline with a digital twin of the loudspeaker suitable for realistic simulations.</p>
+                </div>
+
+                <div class="paper-links">
+                    <a href="assets/papers/voxline-loudspeakers/report.pdf" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a href="https://jmlemercier.github.io/voxline-loudspeakers/" target="_blank" rel="noopener noreferrer">Project</a>
+                </div>
+            </article>
+            -->
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span id="copyright-year">2026</span> Jean-Marie Lemercier
+    </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
